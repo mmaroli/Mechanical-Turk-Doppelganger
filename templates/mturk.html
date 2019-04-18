@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<body>
+  <title> MTurk Doppelganger </title>
+  <h1> We're Turkers </h1>
+  <h2> Type in the text seen in the image </h2>
+    <h3> If there is no text, please type "None" </h3>
+    <h4> When images do not show up anymore we are done! </h4>
+    <img src={{ image_url }} alt="Youtube Image" width="800" height="500">
+    <form action="/submit-results" method="post">
+      Text in Image: <input type="text" name="image_text" value=""><br>
+      <input type="text" name="image_url" value={{ image_url }}  style="display:none;">
+      <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
